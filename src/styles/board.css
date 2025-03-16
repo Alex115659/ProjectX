@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@100;300;500;700;900&display=swap');
+
+.board {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Big Shoulders', sans-serif;
+    font-weight: 700;
+}
+
+.searching-system {
+    margin-bottom: 20px;
+}
+
+.searching-system input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.searching-system input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+ol {
+    max-height: 300px; 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+ol::-webkit-scrollbar {
+    width: 8px;
+}
+
+ol::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+ol::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 8px;
+}
+
+ol::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+ol li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 12px 15px;
+    margin: 6px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    font-family: 'Big Shoulders', sans-serif;
+    transition: transform 0.2s ease-in-out, background 0.3s ease;
+}
+
+ol li:hover {
+    background: #007bff;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+ol li span {
+    font-weight: bold;
+    color: black;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes loading {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.loading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    animation: loading 1.5s infinite;
+}
+
+p {
+    font-size: 16px;
+    color: #888;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .board {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    ol {
+        max-height: 250px;
+    }
+
+    ol li {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
